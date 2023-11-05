@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-import static com.sajjad.academicportalbackend.RealEstateApplication.*;
+import static com.sajjad.academicportalbackend.academicPortal.*;
 import static com.sajjad.academicportalbackend.constants.enums.OperationStatus.FAILURE;
 import static com.sajjad.academicportalbackend.constants.enums.OperationStatus.SUCCESS;
 

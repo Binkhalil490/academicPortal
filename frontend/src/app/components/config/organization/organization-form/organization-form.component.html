@@ -1,0 +1,40 @@
+<h1>Organization Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>    name</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>address</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>email</mat-label>
+                    <input matInput type="email" formControlName="email" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>contactNo</mat-label>
+                    <input matInput formControlName="companyName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

@@ -1,0 +1,88 @@
+<h1>Plot Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>project</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>plotNo</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>roadNo</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>sectorNo</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>ratePerKatha</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>block</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>areaInKatha</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>facing</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>totalPrice</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>totalPriceInWords</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

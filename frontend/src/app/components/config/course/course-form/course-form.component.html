@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-form-field>
+        <mat-label>Course Code</mat-label>
+        <input matInput formControlName="courseCode">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Course Name</mat-label>
+        <input matInput formControlName="courseName">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Course Materials</mat-label>
+        <textarea matInput formControlName="courseMaterials"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Syllabus</mat-label>
+        <textarea matInput formControlName="syllabus"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

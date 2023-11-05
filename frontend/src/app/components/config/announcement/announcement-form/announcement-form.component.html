@@ -1,0 +1,18 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Content</mat-label>
+        <textarea matInput formControlName="content"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Date Posted</mat-label>
+        <input matInput formControlName="datePosted" type="date">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

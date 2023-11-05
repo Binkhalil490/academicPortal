@@ -1,0 +1,24 @@
+<h1>Project Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>name</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>paymentConfig</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

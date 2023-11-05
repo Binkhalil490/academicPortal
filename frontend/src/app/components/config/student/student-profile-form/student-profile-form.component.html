@@ -1,0 +1,105 @@
+<!-- <h1>Student Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>firstName</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>lastName</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>contactNumber</mat-label>
+                    <input matInput formControlName="contactNumber" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>academicHistory</mat-label>
+                    <input matInput formControlName="academicHistory" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<h1>Student Profile Form</h1>
+
+<form (ngSubmit)="submitForm()">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="First Name">
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Last Name">
+    </div>
+
+    <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input type="text" class="form-control" id="contactNumber" formControlName="contactNumber" placeholder="Contact Number">
+    </div>
+
+    <div class="form-group">
+        <label for="academicHistory">Academic History</label>
+        <input type="text" class="form-control" id="academicHistory" formControlName="academicHistory" placeholder="Academic History">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+<div class="wrapper">
+  <div class="title">
+    <h1>Student Form</h1>
+  </div>
+  <div class="contact-form">
+    <div class="input-fields">
+      <input type="text" class="input" placeholder="firstName" value="{{formGroup.controls['firstName'].value}}">
+      <input type="text" class="input" placeholder="lastName" value="{{formGroup.controls['lastName'].value}}">
+      <input type="text" class="input" placeholder="contactNumber" value="{{formGroup.controls['contactNumber'].value}}">
+      <input type="text" class="input" placeholder="academicHistory" value="{{formGroup.controls['academicHistory'].value}}">
+    </div>
+    <div class="msg">
+      <textarea placeholder="Message"></textarea>
+      <div class="btn" (click)="submitForm()">Submit</div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+<h1>Assignment Submission Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+  <div class="input-container">
+    <mat-form-field>
+      <mat-label>Assignment</mat-label>
+      <mat-select formControlName="assignmentId">
+        <mat-option *ngFor="let assignment of availableAssignments" [value]="assignment.id">
+          {{ assignment.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="input-container">
+    <mat-form-field>
+      <mat-label>Student</mat-label>
+      <mat-select formControlName="studentId">
+        <mat-option *ngFor="let student of availableStudents" [value]="student.id">
+          {{ student.firstName }} {{ student.lastName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="input-container">
+    <mat-form-field>
+      <mat-label>Submission Content</mat-label>
+      <textarea matInput formControlName="submissionContent"></textarea>
+    </mat-form-field>
+  </div>
+
+  <!-- Include other form fields here (e.g., submissionDate, grade) -->
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

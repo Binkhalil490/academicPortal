@@ -1,0 +1,245 @@
+<h1>Client Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>source</mat-label>
+                    <input matInput formControlName="source"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>clientId</mat-label>
+                    <input matInput formControlName="clientId"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>name</mat-label>
+                    <input matInput formControlName="name"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>fatherOrHusbandName</mat-label>
+                    <input matInput formControlName="fatherOrHusbandName"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>motherName</mat-label>
+                    <input matInput formControlName="motherName"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>company</mat-label>
+                    <input matInput formControlName="company"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>designation</mat-label>
+                    <input matInput formControlName="designation"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>profession</mat-label>
+                    <input matInput formControlName="profession"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>age</mat-label>
+                    <input matInput formControlName="age"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>residentialHouse</mat-label>
+                    <input matInput formControlName="residentialHouse"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>district</mat-label>
+                    <input matInput formControlName="district"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>phone</mat-label>
+                    <input matInput formControlName="phone"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>currentAddress</mat-label>
+                    <input matInput formControlName="currentAddress"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>permanentAddress</mat-label>
+                    <input matInput formControlName="permanentAddress"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>email</mat-label>
+                    <input matInput formControlName="email"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+       
+        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nationality</mat-label>
+                    <input matInput formControlName="nationality"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nid</mat-label>
+                    <input matInput formControlName="nid"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>tinNo</mat-label>
+                    <input matInput formControlName="tinNo"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>religion</mat-label>
+                    <input matInput formControlName="religion"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>maritalStatus</mat-label>
+                    <input matInput formControlName="maritalStatus"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nomineeName</mat-label>
+                    <input matInput formControlName="nomineeName"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nomineeRelation</mat-label>
+                    <input matInput formControlName="nomineeRelation"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nomineeAddress</mat-label>
+                    <input matInput formControlName="nomineeAddress"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nomineeNid</mat-label>
+                    <input matInput formControlName="nomineeNid"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>nomineePhone</mat-label>
+                    <input matInput formControlName="nomineePhone"/>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Date of Registration</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dateOfRegistration">
+                    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                    <!-- <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>  -->
+        
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

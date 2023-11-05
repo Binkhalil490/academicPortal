@@ -1,0 +1,56 @@
+<h1>Payment Config Form Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="5:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>name</mat-label>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>bookingMoneyPerKatha</mat-label>
+                    <input matInput formControlName="bookingMoneyPerKatha" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>onePaymentDuration</mat-label>
+                    <input matInput formControlName="onePaymentDuration" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>downPaymentDuration</mat-label>
+                    <input matInput formControlName="downPaymentDuration" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>downPaymentPercentage</mat-label>
+                    <input matInput formControlName="downPaymentPercentage" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>delayCharge</mat-label>
+                    <input matInput formControlName="delayCharge" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>

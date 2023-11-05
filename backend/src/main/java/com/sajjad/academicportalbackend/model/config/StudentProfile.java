@@ -24,6 +24,7 @@ public class StudentProfile extends AuditableEntity {
     private String firstName;
     private String lastName;
     private String contactNumber;
+    private String email;
     private String academicHistory;
 
 

@@ -14,18 +14,15 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 public class StudentProfile extends AuditableEntity {
-
-
     @Getter
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
-
+    private String roll;
     private String firstName;
     private String lastName;
     private String contactNumber;
     private String department;
     private String session;
-
 
 }

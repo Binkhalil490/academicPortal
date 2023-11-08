@@ -1,7 +1,7 @@
-import { AuditAbleModel } from "../super-model/audit-able-model";
 
 
-interface studentReg extends AuditAbleModel{
+
+interface StudentReg {
     userId?: number;
     firstName?: string;
     lastName?: string;
@@ -11,6 +11,7 @@ interface studentReg extends AuditAbleModel{
     username?: string;
     email?: string;
     role?: string;
+    
 
    
 }

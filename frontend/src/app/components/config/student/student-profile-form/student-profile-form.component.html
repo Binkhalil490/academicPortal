@@ -1,5 +1,5 @@
-<!-- <h1>Student Form</h1>
-<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+<h1>Student Form</h1>
+<!-- <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <mat-grid-list cols="1" rowHeight="16:1">
         <mat-grid-tile>
             <div class="input-container">
@@ -84,23 +84,58 @@
 </body>
 </html> -->
 
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="title">
     <h1>Student Form</h1>
   </div>
   <div class="contact-form">
-    <div class="input-fields">
-      <input type="text" class="input" placeholder="firstName" value="{{formGroup.controls['firstName'].value}}">
-      <input type="text" class="input" placeholder="lastName" value="{{formGroup.controls['lastName'].value}}">
-      <input type="text" class="input" placeholder="contactNumber" value="{{formGroup.controls['contactNumber'].value}}">
-      <input type="text" class="input" placeholder="academicHistory" value="{{formGroup.controls['academicHistory'].value}}">
-      <input type="text" class="input" placeholder="email" value="{{formGroup.controls['email'].value}}">
+    <div class="input-fields"> 
+     
+
+<input type="text" class="input" placeholder="First Name" formControlName="firstName">
+<input type="text" class="input" placeholder="last Name" formControlName="lastName">
+<input type="text" class="input" placeholder="Contact Number" formControlName="contactNumber">
+<input type="text" class="input" placeholder="Department" formControlName="department">
+<input type="text" class="input" placeholder="Academic Session" formControlName="session">
+<input type="text" class="input" placeholder="Email" formControlName="email">
+<input type="text" class="input" placeholder="Username" formControlName="username">
+<input type="password" class="input" placeholder="Password" formControlName="password">
+<input type="text" class="input" placeholder="Role" formControlName="role"> 
+
+ 
     </div>
     <div class="msg">
       <textarea placeholder="Message"></textarea>
       <div class="btn" (click)="submitForm()">Submit</div>
     </div>
   </div>
-</div>
+</div> -->
+
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Student Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="First Name" formControlName="firstName">
+          <input type="text" class="input" placeholder="Last Name" formControlName="lastName">
+          <input type="text" class="input" placeholder="Contact Number" formControlName="contactNumber">
+          <input type="text" class="input" placeholder="Department" formControlName="department">
+          <input type="text" class="input" placeholder="Roll" formControlName="roll">
+          <input type="text" class="input" placeholder="Academic Session" formControlName="session">
+          <input type="text" class="input" placeholder="Email" formControlName="email">
+          <input type="text" class="input" placeholder="Username" formControlName="username">
+          <input type="password" class="input" placeholder="Password" formControlName="password">
+          <input type="text" class="input" placeholder="Role" formControlName="role">
+        </div>
+        <div class="msg">
+          <textarea placeholder="Message"></textarea>
+          <div class="btn" (click)="submitForm()">Submit</div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
 
 

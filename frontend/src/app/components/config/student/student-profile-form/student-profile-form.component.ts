@@ -5,6 +5,7 @@ import { CrudService } from '../../../../services/crud.service';
 import { populateFormControl } from '../../../../utils/object.util';
 import { NotificationUtil } from '../../../../utils/notification.util';
 import { OperationStatus } from 'src/app/constants/status.enum';
+import { User } from 'src/app/model/auth/user';
 
 @Component({
   selector: 'app-student-profile-form',
@@ -12,13 +13,19 @@ import { OperationStatus } from 'src/app/constants/status.enum';
   styleUrls: ['./student-profile-form.component.scss']
 })
 export class StudentProfileFormComponent
-implements OnInit {
+  implements OnInit {
   formGroup!: FormGroup;
   controls: any = {
     "firstName": new FormControl('', []),
     "lastName": new FormControl('', []),
     "contactNumber": new FormControl('', []),
-    "academicHistory": new FormControl('', []),
+    "department": new FormControl('', []),
+    "roll": new FormControl('', []),
+    "session": new FormControl('', []),
+    "email": new FormControl('', []),
+    "username": new FormControl('', []),
+    "password": new FormControl('', []),
+    "role": new FormControl('', []),
   };
   submitted = false;
   endPoint = "studentProfile";
@@ -43,16 +50,23 @@ implements OnInit {
     if (this.formGroup.invalid) {
       return;
     }
+    const user: User = {
+      username: this.formGroup.value.username,
+      password: this.formGroup.value.password,
+      email: this.formGroup.value.email,
+      role: this.formGroup.value.role,
+    }
     const values: StudentProfile = { ...this.data, ...this.formGroup.value };
+    values.user = user;
     this.service.save(values, this.endPoint).subscribe(response => {
       this.formGroup.reset();
       this.submitted = false;
       this.noticeUtil.showResponseMessage(response);
     },
-    (error: Error) => {
-      const res = {status: OperationStatus.FAILURE, message: "Server error! Please contact with support team."};
-      this.noticeUtil.showResponseMessage(res);
-      console.log(this.endPoint, error);
-    });
+      (error: Error) => {
+        const res = { status: OperationStatus.FAILURE, message: "Server error! Please contact with support team." };
+        this.noticeUtil.showResponseMessage(res);
+        console.log(this.endPoint, error);
+      });
   }
 }

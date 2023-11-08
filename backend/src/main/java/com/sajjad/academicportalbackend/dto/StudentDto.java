@@ -11,6 +11,7 @@ public class StudentDto {
     private String department;
     private String session;
     private String username;
+    private String password;
     private String email;
     private String role;
 }

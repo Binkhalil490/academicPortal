@@ -3,11 +3,15 @@ import { User } from "../auth/user"; // Import User if needed
 import { TaughtCourse } from "./taught-course"; // Import TaughtCourse if needed
 
 export interface TeacherProfile extends AuditAbleModel {
-    // id?: number;
-    // user?: User; // Assuming User is a related model
+    id?: number;
     firstName?: string;
     lastName?: string;
     contactNumber?: string;
-    educationalBackground?: string;
-    // coursesTaught?: TaughtCourse[]; // Assuming TaughtCourse is a related model
-}
+    department?: string;
+    employeeId?: string;
+    academicSession?: string;
+    // Other fields specific to the TeacherProfile
+  
+    user?: User; // This property represents the associated User entity
+  }
+  

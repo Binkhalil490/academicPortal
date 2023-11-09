@@ -1,14 +1,13 @@
 package com.sajjad.academicportalbackend.model.config;
 
-import com.sajjad.academicportalbackend.model.super_classes.AuditableEntity;
 import com.sajjad.academicportalbackend.model.auth.User;
+import com.sajjad.academicportalbackend.model.super_classes.AuditableEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 @Getter
 @Setter
@@ -25,10 +24,11 @@ public class TeacherProfile extends AuditableEntity {
     private String firstName;
     private String lastName;
     private String contactNumber;
-    private String educationalBackground;
+    private String department;
+    private String employeeId; // Specific to teachers
+    private String academicSession;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "teacher_id")
     private List<TaughtCourse> coursesTaught = new ArrayList<>();
-
 }

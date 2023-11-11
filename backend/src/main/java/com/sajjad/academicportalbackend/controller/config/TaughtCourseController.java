@@ -2,7 +2,6 @@ package com.sajjad.academicportalbackend.controller.config;
 
 import com.sajjad.academicportalbackend.controller.super_classes.CrudController;
 import com.sajjad.academicportalbackend.dto.Response;
-import com.sajjad.academicportalbackend.model.config.TaughtCourse;
 import com.sajjad.academicportalbackend.service.super_classes.config.TaughtCourseService;
 import com.sajjad.academicportalbackend.utils.PageUtil;
 import lombok.RequiredArgsConstructor;

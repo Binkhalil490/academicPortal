@@ -2,7 +2,6 @@ package com.sajjad.academicportalbackend.service.config;
 
 import com.sajjad.academicportalbackend.dao.config.TaughtCourseRepository;
 import com.sajjad.academicportalbackend.dto.Response;
-import com.sajjad.academicportalbackend.model.config.TaughtCourse;
 import com.sajjad.academicportalbackend.service.super_classes.config.TaughtCourseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

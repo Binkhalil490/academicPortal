@@ -28,7 +28,9 @@ public class TeacherProfile extends AuditableEntity {
     private String employeeId; // Specific to teachers
     private String academicSession;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "teacher_id")
-    private List<TaughtCourse> coursesTaught = new ArrayList<>();
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "teacher_id")
+//    private List<TaughtCourse> coursesTaught = new ArrayList<>();
+    @ManyToMany
+    private List<Course> courses;
 }

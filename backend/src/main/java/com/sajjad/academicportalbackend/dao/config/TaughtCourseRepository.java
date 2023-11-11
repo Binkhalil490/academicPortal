@@ -1,6 +1,5 @@
 package com.sajjad.academicportalbackend.dao.config;
 
-import com.sajjad.academicportalbackend.model.config.TaughtCourse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.sajjad.academicportalbackend.dao.super_classes.CrudDao;
 import org.springframework.data.jpa.repository.Modifying;

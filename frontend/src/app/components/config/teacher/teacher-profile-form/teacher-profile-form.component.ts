@@ -28,7 +28,7 @@ export class TeacherProfileFormComponent
     "role": new FormControl('', []),
   };
   submitted = false;
-  endPoint = "teacherProfile";
+  endPoint = "teacher-profile";
   data: any = {};
 
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }

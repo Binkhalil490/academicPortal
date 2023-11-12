@@ -1,4 +1,4 @@
-<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+<!-- <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
     <div class="wrapper">
       <div class="title">
         <h1>Course Form</h1>
@@ -19,5 +19,28 @@
         </div>
       </div>
     </div>
+  </form> -->
+
+
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Course Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="Course Code" formControlName="courseCode">
+          <input type="text" class="input" placeholder="Course Name" formControlName="courseName">
+          <input type="text" class="input" placeholder="Description" formControlName="description">
+          <input type="text" class="input" placeholder="Course Materials" formControlName="courseMaterials">
+          <input type="text" class="input" placeholder="Syllabus" formControlName="syllabus">
+  
+          </div>
+        <div class="msg">
+          <textarea placeholder="Additional Notes" formControlName="additionalNotes"></textarea>
+          <div class="btn" (click)="submitForm()">Submit Course</div> </div>
+      </div>
+    </div>
   </form>
+  
    

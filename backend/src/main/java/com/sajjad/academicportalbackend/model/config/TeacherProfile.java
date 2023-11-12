@@ -30,7 +30,7 @@ public class TeacherProfile extends AuditableEntity {
 
 //    @OneToMany(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "teacher_id")
-//    private List<TaughtCourse> coursesTaught = new ArrayList<>();
+//    private List<Course> coursesTaught = new ArrayList<>();
     @ManyToMany
     private List<Course> courses;
 }

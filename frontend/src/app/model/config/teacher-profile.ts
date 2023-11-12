@@ -1,6 +1,6 @@
 import { AuditAbleModel } from "../super-model/audit-able-model";
 import { User } from "../auth/user"; // Import User if needed
-import { TaughtCourse } from "./taught-course"; // Import TaughtCourse if needed
+import { Course } from "./course";
 
 export interface TeacherProfile extends AuditAbleModel {
     id?: number;
@@ -11,7 +11,7 @@ export interface TeacherProfile extends AuditAbleModel {
     employeeId?: string;
     academicSession?: string;
     // Other fields specific to the TeacherProfile
-  
+    courses? : Course[];
     user?: User; // This property represents the associated User entity
   }
   

@@ -22,13 +22,14 @@ public class Course extends AuditableEntity {
     private String courseMaterials;
     private String syllabus;
 
-    @Getter
-    @OneToMany(mappedBy = "course")
-    private List<TaughtCourse> taughtCourses = new ArrayList<>();
 
-    // Constructors, getters, and setters
+    @ManyToMany
+    private List<TeacherProfile> teachers;
 
-    public void setTaughtCourses(List<TaughtCourse> taughtCourses) {
-        this.taughtCourses = taughtCourses;
-    }
+
+
+
+
+
+
 }

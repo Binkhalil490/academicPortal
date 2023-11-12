@@ -6,6 +6,7 @@ import { populateFormControl } from '../../../../utils/object.util';
 import { NotificationUtil } from '../../../../utils/notification.util';
 import { OperationStatus } from 'src/app/constants/status.enum';
 import { User } from 'src/app/model/auth/user';
+import { Course } from 'src/app/model/config/course';
 
 @Component({
   selector: 'app-teacher-profile-form',
@@ -26,14 +27,19 @@ export class TeacherProfileFormComponent
     "username": new FormControl('', []),
     "password": new FormControl('', []),
     "role": new FormControl('', []),
+    "courses": new FormControl([], []),
   };
   submitted = false;
   endPoint = "teacher-profile";
   data: any = {};
+  courses: Course[] = [];
 
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
   ngOnInit() {
+    this.service.getList("course", 0, 10000).then(value => {
+      this.courses = value.data.content;
+    })
     this.createForm();
     this.data = this.service.data;
     if (this.data.id) {
@@ -56,8 +62,17 @@ export class TeacherProfileFormComponent
       email: this.formGroup.value.email,
       role: this.formGroup.value.role,
     };
-    const values: TeacherProfile = { ...this.data, ...this.formGroup.value };
-    values.user = user;
+    const courseList: Course[] = this.formGroup.value.courses.map((courseId: number) => {
+      return { id: courseId };
+    });
+
+    const values: TeacherProfile = { 
+      ...this.data, 
+      ...this.formGroup.value ,
+      courses : courseList,
+      user : user
+    };
+    
     this.service.save(values, this.endPoint).subscribe(response => {
       this.formGroup.reset();
       this.submitted = false;

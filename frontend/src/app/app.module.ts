@@ -82,6 +82,9 @@ import { AssignmentFormComponent } from './components/config/assignment/assignme
 import { AssignmentListComponent } from './components/config/assignment/assignment-list/assignment-list.component';
 import { AssignmentSubmissionFormComponent } from './components/config/submission-assignment/assignment-submission-form/assignment-submission-form.component';
 import { AssignmentSubmissionListComponent } from './components/config/submission-assignment/assignment-submission-list/assignment-submission-list.component';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';  
 
 @NgModule({
   declarations: [
@@ -145,6 +148,7 @@ import { AssignmentSubmissionListComponent } from './components/config/submissio
     AssignmentListComponent,
     AssignmentSubmissionFormComponent,
     AssignmentSubmissionListComponent,
+    DashboardComponent,
 
 
 
@@ -166,7 +170,9 @@ import { AssignmentSubmissionListComponent } from './components/config/submissio
     MatGridListModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

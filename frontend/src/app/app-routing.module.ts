@@ -24,16 +24,26 @@ import { StudentListComponent } from './components/config/student/student-profil
 import { TeacherProfileListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
 import { CourseFormComponent } from './components/config/course/course-form/course-form.component';
 import { CourseListComponent } from './components/config/course/course-list/course-list.component';
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: '', component: RoleFormComponent},
-  {path: 'list', component: RoleListComponent},
-  {path: 'student-form', component: StudentProfileFormComponent},
-  {path: 'teacher-form', component: TeacherProfileFormComponent},
-  {path: 'student-list', component: StudentListComponent},
-  {path: 'teacher-list', component: TeacherProfileListComponent},
-  {path: 'course-form', component: CourseFormComponent},
-  {path: 'course-list', component: CourseListComponent},
+
+  {
+    path: '', component: DashboardComponent,
+    children: [
+      // {path: '', component: RoleFormComponent},
+      // {path: 'list', component: RoleListComponent},
+      {path: 'student-form', component: StudentProfileFormComponent},
+      {path: 'teacher-form', component: TeacherProfileFormComponent},
+      {path: 'student-list', component: StudentListComponent},
+      {path: 'teacher-list', component: TeacherProfileListComponent},
+      {path: 'course-form', component: CourseFormComponent},
+      {path: 'course-list', component: CourseListComponent},
+    ]
+  }
+  
+
+
 
 
 

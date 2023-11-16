@@ -14,7 +14,6 @@
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        @Getter
         @ManyToOne
         @JoinColumn(name = "course_id")
         private Course course;

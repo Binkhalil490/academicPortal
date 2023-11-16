@@ -10,7 +10,6 @@ export interface TeacherProfile extends AuditAbleModel {
     department?: string;
     employeeId?: string;
     academicSession?: string;
-    // Other fields specific to the TeacherProfile
     courses? : Course[];
     user?: User; // This property represents the associated User entity
   }

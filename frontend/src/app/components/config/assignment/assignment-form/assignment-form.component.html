@@ -1,30 +1,23 @@
+<!-- assignment-form.component.html -->
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
-    <mat-form-field>
-        <mat-label>Title</mat-label>
-        <input matInput formControlName="title">
-    </mat-form-field>
-
-    <mat-form-field>
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="description"></textarea>
-    </mat-form-field>
-
-    <mat-form-field>
-        <mat-label>Due Date</mat-label>
-        <input matInput formControlName="dueDate" type="date">
-    </mat-form-field>
-
-    <!-- Assuming you have a dropdown/select for selecting the course -->
-    <mat-form-field>
-        <mat-label>Course</mat-label>
-        <mat-select formControlName="courseId">
-            <!-- Options will be populated dynamically based on available courses -->
-            <!-- Use ngFor to loop through the available courses and generate options -->
-            <mat-option *ngFor="let course of availableCourses" [value]="course.id">
-                {{ course.courseName }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+    <div class="wrapper">
+      <div class="title">
+        <h1>Assignment Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <label for="course">Course:</label>
+          <select formControlName="course">
+            <option *ngFor="let course of courses" [value]="course.id">{{ course.courseName }}</option>
+          </select>
+          <input type="text" class="input" placeholder="Title" formControlName="title">
+          <textarea class="input" placeholder="Description" formControlName="description"></textarea>
+          <input type="text" class="input" placeholder="Due Date" formControlName="dueDate">
+        </div>
+        <div class="msg">
+          <div class="btn" (click)="submitForm()">Submit</div>
+        </div>
+      </div>
+    </div>
+  </form>
+  

@@ -1,7 +1,10 @@
+import { Course } from "./course";
+
 export interface Assignment {
     id?: number;
     title?: string;
     description?: string;
     dueDate?: Date;
-    courseId?: number; // Assuming you have a course ID
+    courseId?: number;
+    courses? : Course[];
 }

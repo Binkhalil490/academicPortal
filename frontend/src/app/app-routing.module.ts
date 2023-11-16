@@ -21,10 +21,11 @@ import { BranchListComponent } from './components/config/branch/branch-list/bran
 import { StudentProfileFormComponent } from './components/config/student/student-profile-form/student-profile-form.component';
 import { TeacherProfileFormComponent } from './components/config/teacher/teacher-profile-form/teacher-profile-form.component';
 import { StudentListComponent } from './components/config/student/student-profile-list/student-profile-list.component';
-import { TeacherProfileListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
 import { CourseFormComponent } from './components/config/course/course-form/course-form.component';
 import { CourseListComponent } from './components/config/course/course-list/course-list.component';
 import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+import { TeacherListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
+import { AssignmentFormComponent } from './components/config/assignment/assignment-form/assignment-form.component';
 
 const routes: Routes = [
 
@@ -36,9 +37,11 @@ const routes: Routes = [
       {path: 'student-form', component: StudentProfileFormComponent},
       {path: 'teacher-form', component: TeacherProfileFormComponent},
       {path: 'student-list', component: StudentListComponent},
-      {path: 'teacher-list', component: TeacherProfileListComponent},
+      {path: 'teacher-list', component: TeacherListComponent},
       {path: 'course-form', component: CourseFormComponent},
       {path: 'course-list', component: CourseListComponent},
+      {path: 'assignment-form', component: AssignmentFormComponent},
+
     ]
   }
   

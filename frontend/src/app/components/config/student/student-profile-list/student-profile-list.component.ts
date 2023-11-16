@@ -4,6 +4,7 @@ import { StudentProfile } from '../../../../model/config/student-profile';
 import { CrudService } from '../../../../services/crud.service';
 import { AppResponse } from '../../../../dto/response.dto';
 
+
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-profile-list.component.html',

@@ -15,6 +15,10 @@ import { User } from 'src/app/model/auth/user';
 export class StudentProfileFormComponent
   implements OnInit {
   formGroup!: FormGroup;
+  submitted = false;
+  endPoint = "studentProfile";
+  data: any = {};
+
   controls: any = {
     "firstName": new FormControl('', []),
     "lastName": new FormControl('', []),
@@ -27,10 +31,7 @@ export class StudentProfileFormComponent
     "password": new FormControl('', []),
     "role": new FormControl('', []),
   };
-  submitted = false;
-  endPoint = "studentProfile";
-  data: any = {}
-
+  
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
   ngOnInit() {

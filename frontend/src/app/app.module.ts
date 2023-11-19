@@ -1,5 +1,5 @@
 import { ProjectListComponent } from './components/config/project/project-list/project-list.component';
-import { Project } from './model/config/project';
+
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -85,6 +85,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { TeacherListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
 import { AssignmentFormComponent } from './components/config/assignment/assignment-form/assignment-form.component';
 import { AssignmentListComponent } from './components/config/assignment/assignment-list/assignment-list.component';
+import { AssignSubFormComponent } from './components/config/assignment_submission/assign-sub-form/assign-sub-form.component';
+import { AssignSubListComponent } from './components/config/assignment_submission/assign-sub-list/assign-sub-list.component';
+import { CourseEnrollmentComponent } from './components/config/course/course-enrollment/course-enrollment.component';
 
 
 @NgModule({
@@ -148,6 +151,9 @@ import { AssignmentListComponent } from './components/config/assignment/assignme
     DashboardComponent,
     AssignmentFormComponent,
     AssignmentListComponent,
+    AssignSubFormComponent,
+    AssignSubListComponent,
+    CourseEnrollmentComponent,
    
   
 

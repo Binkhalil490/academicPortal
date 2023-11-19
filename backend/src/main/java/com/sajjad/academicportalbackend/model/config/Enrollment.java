@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 @Getter
 @Setter
@@ -23,7 +24,7 @@ public class Enrollment extends AuditableEntity {
     @JoinColumn(name = "course_id")
     private Course course;
 
-    private LocalDateTime enrollmentDate;
+    private LocalDate enrollmentDate;
 
     // Constructors, getters, and setters
 

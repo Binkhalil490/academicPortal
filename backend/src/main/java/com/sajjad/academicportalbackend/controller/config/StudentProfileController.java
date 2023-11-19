@@ -31,6 +31,7 @@ public class StudentProfileController implements CrudController<StudentProfile, 
     public ResponseEntity<Response<Page<StudentProfile>>> getAll(Integer pageNumber, Integer pageSize, String sortDirection, String sortColumns) {
         Pageable pageable = PageUtil.getPageable(pageNumber, pageSize, sortDirection, sortColumns);
         Response<Page<StudentProfile>> response = studentProfileService.getAll(pageable);
+        response.getData().getContent().forEach(studentProfile -> studentProfile.setUser(null));
         return ResponseEntity.ok(response);
     }
 

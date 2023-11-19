@@ -1,0 +1,22 @@
+<!-- enrollment-form.component.html -->
+
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Enrollment Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <!-- You can use appropriate form controls for the data types -->
+          <input type="text" class="input" placeholder="Student ID" formControlName="studentId">
+          <input type="text" class="input" placeholder="Course ID" formControlName="courseId">
+          <!-- You may want to use a date picker for enrollmentDate -->
+          <input type="date" class="input" placeholder="Enrollment Date" formControlName="enrollmentDate">
+        </div>
+        <div class="msg">
+          <div class="btn" (click)="submitForm()">Submit</div>
+        </div>
+      </div>
+    </div>
+  </form>
+  

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 @Getter
 @Setter
@@ -19,11 +20,12 @@ public class AssignmentSubmission extends AuditableEntity {
     @JoinColumn(name = "assignment_id")
     private Assignment assignment;
 
+    @Getter
     @ManyToOne
     @JoinColumn(name = "student_id")
     private StudentProfile student;
 
-    private LocalDateTime submissionDate;
+    private LocalDate submissionDate;
     private String submissionContent;
     private String grade;
 

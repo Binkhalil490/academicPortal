@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("teacher-PROFILE/")
+@RequestMapping("teacher-profile/")
 public class TeacherProfileController implements CrudController<TeacherProfile, Long> {
     private final TeacherProfileService teacherProfileService;
 

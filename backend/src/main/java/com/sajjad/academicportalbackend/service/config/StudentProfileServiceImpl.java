@@ -1,5 +1,6 @@
 package com.sajjad.academicportalbackend.service.config;
 
+import com.sajjad.academicportalbackend.dao.auth.UserRepository;
 import com.sajjad.academicportalbackend.dao.config.StudentProfileRepository;
 import com.sajjad.academicportalbackend.dto.Response;
 import com.sajjad.academicportalbackend.model.config.StudentProfile;
@@ -18,20 +19,20 @@ import static com.sajjad.academicportalbackend.constants.enums.OperationStatus.S
 @Service
 @RequiredArgsConstructor
 public class StudentProfileServiceImpl implements StudentProfileService {
-
+    private final UserRepository userRepository;
     private final StudentProfileRepository repository;
 
     @Override
     public Response storeData(StudentProfile data) {
         String validationMsg = validate(data);
         if (validationMsg == null) {
- repository.save(data);
+            userRepository.save(data.getUser());
+            repository.save(data);
             return new Response(SUCCESS, "Successfully stored data", null);
         } else {
             return new Response(FAILURE, validationMsg, null);
         }
     }
-
 
 
     @Override

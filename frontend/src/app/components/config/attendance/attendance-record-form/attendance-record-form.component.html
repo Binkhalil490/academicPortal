@@ -1,23 +1,37 @@
+<!-- attendance-record-form.component.html -->
+
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
-    <mat-form-field>
-        <mat-label>Student</mat-label>
-        <input matInput formControlName="student">
-    </mat-form-field>
+  <div class="wrapper">
+    <div class="title">
+      <h1>Attendance Record Form</h1>
+    </div>
+    <div class="contact-form">
+      <div class="input-fields">
+        <!-- You can use appropriate form controls for the data types -->
+        <!-- <input type="text" class="input" placeholder="Student ID" formControlName="studentId"> -->
 
-    <mat-form-field>
-        <mat-label>Course</mat-label>
-        <input matInput formControlName="course">
-    </mat-form-field>
+        <label for="students">Students:</label>
+        <select formControlName="student" >
+          <option *ngFor="let student of students" [value]="student.id">{{student.firstName}}</option>
+        </select>
 
-    <mat-form-field>
-        <mat-label>Date</mat-label>
-        <input matInput type="date" formControlName="date">
-    </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Status</mat-label>
-        <input matInput formControlName="status">
-    </mat-form-field>
+        <!-- <input type="text" class="input" placeholder="Course ID" formControlName="courseId"> -->
 
-    <button mat-raised-button color="primary" type="submit">Submit</button>
+        <label for="courses">Courses:</label>
+        <select formControlName="course" >
+          <option *ngFor="let course of courses" [value]="course.id">{{course.courseName}}</option>
+        </select>
+
+
+
+        <!-- You may want to use a date picker for the date -->
+        <input type="date" class="input" placeholder="Date" formControlName="date">
+        <input type="text" class="input" placeholder="Status" formControlName="status">
+      </div>
+      <div class="msg">
+        <div class="btn" (click)="submitForm()">Submit</div>
+      </div>
+    </div>
+  </div>
 </form>

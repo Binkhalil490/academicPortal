@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StudentProfile } from '../../../../model/config/student-profile';
+import { CrudService } from '../../../../services/crud.service';
 import { AppResponse } from '../../../../dto/response.dto';
-import { User } from 'src/app/model/auth/user'; // Import the User interface
-import { CrudService } from 'src/app/services/crud.service';
-import { StudentProfile } from 'src/app/model/config/student-profile';
+
 
 @Component({
   selector: 'app-student-list',
@@ -12,27 +12,39 @@ import { StudentProfile } from 'src/app/model/config/student-profile';
 })
 export class StudentListComponent implements OnInit {
 
-  displayedColumns: string[] = ['firstName','lastName','contactNumber','academicHistory','actions'];
+  displayedColumns: string[] = 
+  [
+    'firstName',  
+    'lastName',
+    'contactNumber',
+    'department',
+    'roll',
+    'session',
+    'actions'
+];
   dataSource: StudentProfile[] = [];
 
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('studentProfile').then((res: AppResponse) => {  // Assuming endpoint is 'user'
-      this.dataSource = res.data.content;
-    });
+    this.service.getList('studentProfile').then((res: AppResponse) => {
+      this.dataSource = res.data.content
+    }
+    );
   }
 
   delete(index: number) {
     let id = this.dataSource[index].id as number;
-    this.service.delete(id, "studentProfile").subscribe(() => {  // Assuming endpoint is 'user'
+    this.service.delete(id, "studentProfile").subscribe(() => {
       const newData = this.dataSource.filter((s, i) => i != index);
       this.dataSource = newData;
-    });
+    })
   }
 
   edit(index: number) {
     this.service.data = { ...this.dataSource[index] };
-    this.router.navigate(['/student-form']);  // Route to 'student-form' when editing a student
+    this.router.navigate(['/student-form']);
   }
+
+  
 }

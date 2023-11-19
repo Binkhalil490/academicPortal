@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+  <div class="wrapper">
+    <div class="title">
+      <h1>Assignment Submission Form</h1>
+    </div>
+    <div class="contact-form">
+      <div class="input-fields">
+        <!-- You can use appropriate form controls for the data types -->
+        <input type="text" class="input" placeholder="Assignment ID" formControlName="assignmentId">
+        <input type="text" class="input" placeholder="Student ID" formControlName="studentId">
+        <!-- You may want to use a date picker for submissionDate -->
+        <input type="date" class="input" placeholder="Submission Date" formControlName="submissionDate">
+        <input type="text" class="input" placeholder="Submission Content" formControlName="submissionContent">
+        <input type="text" class="input" placeholder="Grade" formControlName="grade">
+      </div>
+      <div class="msg">
+        <div class="btn" (click)="submitForm()">Submit</div>
+      </div>
+    </div>
+  </div>
+</form>

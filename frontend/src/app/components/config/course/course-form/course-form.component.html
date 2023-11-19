@@ -1,28 +1,46 @@
-<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
-    <mat-form-field>
-        <mat-label>Course Code</mat-label>
-        <input matInput formControlName="courseCode">
-    </mat-form-field>
+<!-- <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Course Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="Course Code" formControlName="courseCode">
+          <input type="text" class="input" placeholder="Course Name" formControlName="courseName">
+          <input type="text" class="input" placeholder="Description" formControlName="description">
+          <input type="text" class="input" placeholder="Course Materials" formControlName="courseMaterials">
+          <input type="text" class="input" placeholder="Syllabus" formControlName="syllabus">
 
-    <mat-form-field>
-        <mat-label>Course Name</mat-label>
-        <input matInput formControlName="courseName">
-    </mat-form-field>
+          <input type="text">
+        </div>
+        <div class="msg">
+          <textarea placeholder="Message" formControlName="message"></textarea>
+          <div class="btn" (click)="submitForm()">Submit</div>
+        </div>
+      </div>
+    </div>
+  </form> -->
 
-    <mat-form-field>
-        <mat-label>Description</mat-label>
-        <textarea matInput formControlName="description"></textarea>
-    </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Course Materials</mat-label>
-        <textarea matInput formControlName="courseMaterials"></textarea>
-    </mat-form-field>
-
-    <mat-form-field>
-        <mat-label>Syllabus</mat-label>
-        <textarea matInput formControlName="syllabus"></textarea>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Course Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <input type="text" class="input" placeholder="Course Code" formControlName="courseCode">
+          <input type="text" class="input" placeholder="Course Name" formControlName="courseName">
+          <input type="text" class="input" placeholder="Description" formControlName="description">
+          <input type="text" class="input" placeholder="Course Materials" formControlName="courseMaterials">
+          <input type="text" class="input" placeholder="Syllabus" formControlName="syllabus">
+  
+          </div>
+        <div class="msg">
+          <textarea placeholder="Additional Notes" formControlName="additionalNotes"></textarea>
+          <div class="btn" (click)="submitForm()">Submit Course</div> </div>
+      </div>
+    </div>
+  </form>
+  
+   

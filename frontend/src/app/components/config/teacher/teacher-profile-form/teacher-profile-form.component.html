@@ -1,23 +1,30 @@
 <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
-    <mat-form-field>
-        <mat-label>First Name</mat-label>
-        <input matInput formControlName="firstName">
-    </mat-form-field>
+  <div class="wrapper">
+    <div class="title">
+      <h1>Teacher Form</h1>
+    </div>
+    <div class="contact-form">
+      <div class="input-fields">
+        <input type="text" class="input" placeholder="First Name" formControlName="firstName">
+        <input type="text" class="input" placeholder="Last Name" formControlName="lastName">
+        <input type="text" class="input" placeholder="Contact Number" formControlName="contactNumber">
+        <input type="text" class="input" placeholder="Department" formControlName="department">
+        <input type="text" class="input" placeholder="Employee ID" formControlName="employeeId">
+        <input type="text" class="input" placeholder="Academic Session" formControlName="academicSession">
+        <input type="text" class="input" placeholder="Email" formControlName="email">
+        <input type="text" class="input" placeholder="Username" formControlName="username">
+        <input type="password" class="input" placeholder="Password" formControlName="password">
+        <input type="text" class="input" placeholder="Role" formControlName="role">
 
-    <mat-form-field>
-        <mat-label>Last Name</mat-label>
-        <input matInput formControlName="lastName">
-    </mat-form-field>
-
-    <mat-form-field>
-        <mat-label>Contact Number</mat-label>
-        <input matInput formControlName="contactNumber">
-    </mat-form-field>
-
-    <mat-form-field>
-        <mat-label>Educational Background</mat-label>
-        <textarea matInput formControlName="educationalBackground"></textarea>
-    </mat-form-field>
-
-    <button mat-raised-button color="primary" type="submit">Submit</button>
+        <label for="courses">Courses:</label>
+        <select formControlName="courses" multiple>
+          <option *ngFor="let course of courses" [value]="course.id">{{course.courseName}}</option>
+        </select>
+      </div>
+      <div class="msg">
+        <textarea placeholder="Message"></textarea>
+        <div class="btn" (click)="submitForm()">Submit</div>
+      </div>
+    </div>
+  </div>
 </form>

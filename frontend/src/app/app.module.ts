@@ -1,5 +1,5 @@
 import { ProjectListComponent } from './components/config/project/project-list/project-list.component';
-import { Project } from './model/config/project';
+
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -75,13 +75,20 @@ import { AttendanceRecordListComponent } from './components/config/attendance/at
 import { CourseFormComponent } from './components/config/course/course-form/course-form.component';
 import { CourseListComponent } from './components/config/course/course-list/course-list.component';
 import { TeacherProfileFormComponent } from './components/config/teacher/teacher-profile-form/teacher-profile-form.component';
-import { TeacherProfileListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
+// import { TeacherProfileListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
 import { AnnouncementFormComponent } from './components/config/announcement/announcement-form/announcement-form.component';
 import { AnnouncementListComponent } from './components/config/announcement/announcement-list/announcement-list.component';
+
+import { DashboardComponent } from './components/layout/dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';  
+import { TeacherListComponent } from './components/config/teacher/teacher-profile-list/teacher-profile-list.component';
 import { AssignmentFormComponent } from './components/config/assignment/assignment-form/assignment-form.component';
 import { AssignmentListComponent } from './components/config/assignment/assignment-list/assignment-list.component';
-import { AssignmentSubmissionFormComponent } from './components/config/submission-assignment/assignment-submission-form/assignment-submission-form.component';
-import { AssignmentSubmissionListComponent } from './components/config/submission-assignment/assignment-submission-list/assignment-submission-list.component';
+import { AssignSubFormComponent } from './components/config/assignment_submission/assign-sub-form/assign-sub-form.component';
+import { AssignSubListComponent } from './components/config/assignment_submission/assign-sub-list/assign-sub-list.component';
+import { CourseEnrollmentComponent } from './components/config/course/course-enrollment/course-enrollment.component';
+
 
 @NgModule({
   declarations: [
@@ -138,13 +145,17 @@ import { AssignmentSubmissionListComponent } from './components/config/submissio
     CourseFormComponent,
     CourseListComponent,
     TeacherProfileFormComponent,
-    TeacherProfileListComponent,
+    TeacherListComponent,
     AnnouncementFormComponent,
     AnnouncementListComponent,
+    DashboardComponent,
     AssignmentFormComponent,
     AssignmentListComponent,
-    AssignmentSubmissionFormComponent,
-    AssignmentSubmissionListComponent,
+    AssignSubFormComponent,
+    AssignSubListComponent,
+    CourseEnrollmentComponent,
+   
+  
 
 
 
@@ -166,7 +177,9 @@ import { AssignmentSubmissionListComponent } from './components/config/submissio
     MatGridListModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@ export class TeacherListComponent implements OnInit {
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('teacher-profile').then((res: AppResponse) => {
+    this.service.getList('teacher-profile').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

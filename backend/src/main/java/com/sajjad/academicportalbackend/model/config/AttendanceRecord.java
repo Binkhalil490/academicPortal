@@ -15,12 +15,12 @@ public class AttendanceRecord extends AuditableEntity {
     private Long id;
 
     @Getter
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "student_id")
     private StudentProfile student;
 
     @Getter
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "course_id")
     private Course course;
 

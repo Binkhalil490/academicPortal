@@ -17,7 +17,7 @@ export class BranchListComponent implements OnInit {
   constructor(private service: CrudService, private router: Router) { }
 
   ngOnInit(): void {
-    this.service.getList('branch').then((res: AppResponse) => {
+    this.service.getList('branch').subscribe((res: AppResponse) => {
       this.dataSource = res.data.content
     }
     );

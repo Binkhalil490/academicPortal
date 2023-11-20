@@ -54,8 +54,8 @@ export class StudentProfileFormComponent
     const user: User = {
       username: this.formGroup.value.username,
       password: this.formGroup.value.password,
-      email: this.formGroup.value.email,
-      role: this.formGroup.value.role,
+    
+      roles: this.formGroup.value.role,
     }
     const values: StudentProfile = { ...this.data, ...this.formGroup.value };
     values.user = user;

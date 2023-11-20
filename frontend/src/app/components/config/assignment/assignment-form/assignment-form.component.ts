@@ -33,7 +33,7 @@ export class AssignmentFormComponent
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
   ngOnInit() {
-    this.service.getList("course", 0, 10000).then(value => {
+    this.service.getList("course", 0, 10000).subscribe(value => {
       this.courses = value.data.content;
     })
     this.createForm();

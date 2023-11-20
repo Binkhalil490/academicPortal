@@ -37,7 +37,7 @@ export class TeacherProfileFormComponent
   constructor(private formBuilder: FormBuilder, private service: CrudService, private noticeUtil: NotificationUtil) { }
 
   ngOnInit() {
-    this.service.getList("course", 0, 10000).then(value => {
+    this.service.getList("course", 0, 10000).subscribe(value => {
       this.courses = value.data.content;
     })
     this.createForm();
@@ -59,8 +59,8 @@ export class TeacherProfileFormComponent
     const user: User = {
       username: this.formGroup.value.username,
       password: this.formGroup.value.password,
-      email: this.formGroup.value.email,
-      role: this.formGroup.value.role,
+      // email: this.formGroup.value.email,
+      roles: this.formGroup.value.role,
     };
     const courseList: Course[] = this.formGroup.value.courses.map((courseId: number) => {
       return { id: courseId };

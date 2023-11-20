@@ -20,7 +20,7 @@ export class CourseListComponent implements OnInit {
   }
 
   loadCourses() {
-    this.service.getList('course').then((res: AppResponse) => { // Assuming endpoint is 'course'
+    this.service.getList('course').subscribe((res: AppResponse) => { // Assuming endpoint is 'course'
       this.dataSource = res.data.content;
     });
   }

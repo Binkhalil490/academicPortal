@@ -20,7 +20,7 @@ export class AnnouncementListComponent implements OnInit {
   }
 
   loadAnnouncements() {
-    this.service.getList('announcement').then((res: AppResponse) => { // Assuming endpoint is 'announcement'
+    this.service.getList('announcement').subscribe((res: AppResponse) => { // Assuming endpoint is 'announcement'
       this.dataSource = res.data.content;
     });
   }

@@ -88,6 +88,7 @@ import { AssignmentListComponent } from './components/config/assignment/assignme
 import { AssignSubFormComponent } from './components/config/assignment_submission/assign-sub-form/assign-sub-form.component';
 import { AssignSubListComponent } from './components/config/assignment_submission/assign-sub-list/assign-sub-list.component';
 import { CourseEnrollmentComponent } from './components/config/course/course-enrollment/course-enrollment.component';
+import { LoginComponent } from './components/login-page/login/login.component';
 
 
 @NgModule({
@@ -154,6 +155,8 @@ import { CourseEnrollmentComponent } from './components/config/course/course-enr
     AssignSubFormComponent,
     AssignSubListComponent,
     CourseEnrollmentComponent,
+    LoginComponent,
+    RoleListComponent
    
   
 

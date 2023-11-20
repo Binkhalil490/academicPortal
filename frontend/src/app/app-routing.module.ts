@@ -12,11 +12,17 @@ import { AssignmentFormComponent } from './components/config/assignment/assignme
 import { AssignSubFormComponent } from './components/config/assignment_submission/assign-sub-form/assign-sub-form.component';
 import { CourseEnrollmentComponent } from './components/config/course/course-enrollment/course-enrollment.component';
 import { AttendanceRecordFormComponent } from './components/config/attendance/attendance-record-form/attendance-record-form.component';
+import { AttendanceRecordListComponent } from './components/config/attendance/attendance-record-list/attendance-record-list.component';
+import { canActivate, canActivateChild } from './services/auth/auth-guard';
+import { LoginComponent } from './components/login-page/login/login.component';
 
 const routes: Routes = [
+  
 
   {
     path: '', component: DashboardComponent,
+    canActivate: [canActivate],
+    canActivateChild: [canActivateChild],
     children: [
       // {path: '', component: RoleFormComponent},
       // {path: 'list', component: RoleListComponent},
@@ -32,12 +38,15 @@ const routes: Routes = [
       {path: 'assignment-sub-form', component: AssignSubFormComponent},
       {path: 'assignment-sub-list', component: AssignmentFormComponent},
       {path: 'attendance-record-form', component: AttendanceRecordFormComponent},
+      {path: 'attendance-record-list', component: AttendanceRecordListComponent},
 
 
     ]
-  }
+  },
   
-
+  {
+    path: 'login', component: LoginComponent
+  },
 
 
 

@@ -5,7 +5,6 @@ import com.sajjad.academicportalbackend.dto.Response;
 import com.sajjad.academicportalbackend.model.auth.Role;
 import com.sajjad.academicportalbackend.service.super_classes.auth.RoleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -19,7 +18,7 @@ import static com.sajjad.academicportalbackend.constants.enums.OperationStatus.S
 @Service
 @RequiredArgsConstructor
 public class RoleServiceImpl implements RoleService {
-    @Autowired
+
     private final RoleRepository repository;
 
     @Override
@@ -35,8 +34,10 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Response<Page<Role>> getAll(Pageable pageable) {
-        return new Response<>(SUCCESS, null, repository.findByActive(true, pageable));
+        Page<Role> page = repository.findByActive(true, pageable);
+        return new Response<>(SUCCESS, null, page);
     }
+
 
     @Override
     public Response<Role> getById(Long id) {
@@ -59,9 +60,9 @@ public class RoleServiceImpl implements RoleService {
     public String checkDuplicate(Role data) {
 //        boolean rolenameExists;
 //        if (data.hasId()) {
-//            rolenameExists = repository.existsByRolename(data.getRolename(), data.getId());
+//            rolenameExists = roleRepository.existsByRolename(data.getRolename(), data.getId());
 //        } else {
-//            rolenameExists = repository.existsByRolename(data.getRolename());
+//            rolenameExists = roleRepository.existsByRolename(data.getRolename());
 //        }
 //        return rolenameExists ? "Failed to register. Role already exists" : null;
         return null;

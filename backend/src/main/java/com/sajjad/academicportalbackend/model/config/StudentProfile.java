@@ -15,7 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class StudentProfile extends AuditableEntity {
     @Getter
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
     private String roll;

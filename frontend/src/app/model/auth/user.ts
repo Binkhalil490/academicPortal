@@ -1,11 +1,9 @@
 import { ApprovableEntity } from "../super-model/approvable-model";
+import { Role } from "./role";
 
 export interface User extends ApprovableEntity{
-
-
-    id?: number; // As the backend model has an ID field
+    name?: string;
     username?: string;
     password?: string;
-    email?: string; // Adding this field based on the Java model
-    role?: string; // Singular "role" as in the provided Java model
+    roles?: Array<Role>;
 }

@@ -35,10 +35,10 @@ export class AttendanceRecordFormComponent
 
   ngOnInit() {
 
-    this.service.getList("course", 0, 10000).then(value => {
+    this.service.getList("course", 0, 10000).subscribe(value => {
       this.courses = value.data.content;
     })
-    this.service.getList("studentProfile", 0, 10000).then(value => {
+    this.service.getList("studentProfile", 0, 10000).subscribe(value => {
       this.students = value.data.content;
     })
     this.createForm();

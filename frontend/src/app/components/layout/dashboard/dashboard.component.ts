@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDrawerMode } from '@angular/material/sidenav';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 interface SidenavConfig {
   shouldRun: boolean | null;
@@ -112,4 +113,10 @@ export class DashboardComponent {
       ]
     }
   ]
+
+  constructor(private authService: AuthService) {}
+
+  logout() {
+    this.authService.logout();
+  }
 }

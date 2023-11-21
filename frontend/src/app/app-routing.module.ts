@@ -15,6 +15,11 @@ import { AttendanceRecordFormComponent } from './components/config/attendance/at
 import { AttendanceRecordListComponent } from './components/config/attendance/attendance-record-list/attendance-record-list.component';
 import { canActivate, canActivateChild } from './services/auth/auth-guard';
 import { LoginComponent } from './components/login-page/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/interceptors/auth-interceptor.service';
+
+import { ExamScheduleFormComponent } from './components/config/Exam/exam-schedule-form/exam-schedule-form.component';
+import { ExamScheduleListComponent } from './components/config/Exam/exam-schedule-list/exam-schedule-list.component';
 
 const routes: Routes = [
   
@@ -39,6 +44,8 @@ const routes: Routes = [
       {path: 'assignment-sub-list', component: AssignmentFormComponent},
       {path: 'attendance-record-form', component: AttendanceRecordFormComponent},
       {path: 'attendance-record-list', component: AttendanceRecordListComponent},
+      {path: 'exam-schedule-form', component: ExamScheduleFormComponent},
+      {path: 'exam-schedule-list', component: ExamScheduleListComponent},
 
 
     ]
@@ -56,6 +63,13 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
 })
 export class AppRoutingModule { }

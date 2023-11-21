@@ -1,0 +1,35 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Exam Schedule Form</h1>
+      </div>
+      <div class="contact-form">
+        <div class="input-fields">
+          <label for="course" class="white-label">Course Name:</label>
+          <select id="courseName" class="input" aria-placeholder="courseName" formControlName="courseName">
+            <option *ngFor="let course of courses" [value]="course.id">{{ course.courseName }}</option>
+          </select>
+  
+          <label for="courseId" class="white-label">Course Id:</label>
+          <select id="courseId" class="input" aria-placeholder="Course Id" formControlName="courseId">
+            <option *ngFor="let course of courses" [value]="course.id">{{ course.id}}</option>
+          </select>
+  
+          <label for="courseCode" class="white-label">Course Code:</label>
+          <select id="courseCode" class="input" aria-placeholder="Course Code" formControlName="courseCode">
+            <option *ngFor="let course of courses" [value]="course.id">{{ course.courseCode}}</option>
+          </select>
+  
+          <label for="examDate" class="white-label">Exam Date:</label>
+          <input type="date" id="examDate" class="input" placeholder="Exam Date" formControlName="examDate">
+  
+          <label for="examDetails" class="white-label">Exam Details:</label>
+          <input type="text" id="examDetails" class="input" placeholder="Exam Details" formControlName="examDetails">
+        </div>
+        <div class="msg">
+          <div class="btn" (click)="submitForm()">Submit</div>
+        </div>
+      </div>
+    </div>
+  </form>
+  

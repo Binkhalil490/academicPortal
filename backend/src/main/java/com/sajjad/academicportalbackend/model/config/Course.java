@@ -23,7 +23,7 @@ public class Course extends AuditableEntity {
     private String syllabus;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<TeacherProfile> teachers;
 
 

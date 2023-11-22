@@ -26,7 +26,7 @@ export class TeacherProfileFormComponent
     "email": new FormControl('', []),
     "username": new FormControl('', []),
     "password": new FormControl('', []),
-    "role": new FormControl('', []),
+    "role": new FormControl(null, []),
     "courses": new FormControl([], []),
   };
   submitted = false;
@@ -61,6 +61,7 @@ export class TeacherProfileFormComponent
       password: this.formGroup.value.password,
       // email: this.formGroup.value.email,
       roles: this.formGroup.value.role,
+      name: this.formGroup.value.firstName
     };
     const courseList: Course[] = this.formGroup.value.courses.map((courseId: number) => {
       return { id: courseId };

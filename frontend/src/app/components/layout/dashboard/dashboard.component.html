@@ -78,8 +78,10 @@
                             <div class="subsubmenu">
                                 <div class="subsubmenu-item" [routerLink]="'student-form'">student-form</div>
                                 <div class="subsubmenu-item" [routerLink]="'student-list'">student-list</div>
-                                <div class="subsubmenu-item" [routerLink]="'attendance-record-form'">Attendance Record</div>
-                                <div class="subsubmenu-item" [routerLink]="'attendance-record-list'">Attendance list</div>
+                                <div class="subsubmenu-item" [routerLink]="'attendance-record-form'">Attendance Record
+                                </div>
+                                <div class="subsubmenu-item" [routerLink]="'attendance-record-list'">Attendance list
+                                </div>
                             </div>
                         </div>
                         <div class="submenu-item">Teacher
@@ -97,12 +99,19 @@
                         <div class="submenu-item">Assignment
                             <div class="subsubmenu">
                                 <div class="subsubmenu-item" [routerLink]="'assignment-form'">Assignment-form</div>
-                                <div class="subsubmenu-item" [routerLink]="'assignment-sub-form'">Assignment-Submission</div>
+                                <div class="subsubmenu-item" [routerLink]="'assignment-sub-form'">Assignment-Submission
+                                </div>
                                 <div class="subsubmenu-item">assignment-list</div>
 
                             </div>
                         </div>
-                    
+
+                        <div class="submenu-item">Exam Portal
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'exam-schedule-form'">Exam-Schedule-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'exam-schedule-list'">Exam-Schedule-list</div>
+                            </div>
+                        </div>
                         <div class="submenu-item">Location
                             <div class="subsubmenu">
                                 <div class="subsubmenu-item">location-form</div>
@@ -126,7 +135,7 @@
 
                 <div class="menu-item">Project Data
                     <div class="submenu">
-                        
+
                         <div class="submenu-item">Submenu 3.2
                             <div class="subsubmenu">
                                 <div class="subsubmenu-item">Subsubmenu 3.2.1</div>
@@ -149,9 +158,20 @@
                     </button>
                     <span>My App</span>
                     <span class="header-content-spacer"></span>
-                    <button mat-icon-button>
+                    <!-- <button mat-icon-button>
                         <mat-icon>favorite</mat-icon>
-                    </button>
+                    </button> -->
+
+
+                    <div class="topnav">
+                        <div class="topnav-right">
+                            <!-- <a href="#search">Logout</a> -->
+                            <button (click)="logout()">
+                                <!-- <mat-icon>favorite</mat-icon> -->
+                                Logout
+                            </button>
+                        </div>
+                    </div>
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
                         <mat-icon>share</mat-icon>
                     </button>
@@ -162,4 +182,3 @@
 
     </mat-sidenav-content>
 </mat-sidenav-container>
-

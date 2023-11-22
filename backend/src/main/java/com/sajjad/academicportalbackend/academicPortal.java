@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 @EnableJpaAuditing
@@ -16,7 +17,7 @@ public class academicPortal {
     public static void main(String[] args) {
         context = SpringApplication.run(academicPortal.class, args);
         StudentProfileRepository studentProfileRepository = context.getBean(StudentProfileRepository.class);
-
+        System.out.println(new BCryptPasswordEncoder().encode("1234"));
     }
 
     public static String getCurrentUsername(){

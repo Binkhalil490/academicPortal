@@ -8,5 +8,5 @@ export interface Course extends AuditAbleModel {
     description?: string;
     courseMaterials?: string;
     syllabus?: string;
-    taughtCourses?: TaughtCourse[]; // Assuming TaughtCourse is a related model
+    
 }

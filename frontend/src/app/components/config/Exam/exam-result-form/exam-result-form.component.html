@@ -1,0 +1,29 @@
+<!-- <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="wrapper">
+        <div class="title">
+            <h1>Exam Result Form</h1>
+        </div>
+        <div class="contact-form">
+            <div class="input-fields">
+                <label for="student">Student:</label>
+                <select id="student" class="input" aria-placeholder="Student" formControlName="student">
+                    <option *ngFor="let student of students" [value]="student.id">{{ student.firstName }}</option>
+                </select>
+
+                <label for="examSchedule">Exam Schedule:</label>
+                <select id="examSchedule" class="input" aria-placeholder="Exam Schedule" formControlName="examSchedule">
+                    <option *ngFor="let schedule of examSchedules" [value]="schedule.id">{{ schedule.courses + ' - ' + schedule.examDate | date:'shortDate' }}</option>
+                </select>
+
+                <label for="marks">Marks:</label>
+                <input type="number" id="marks" class="input" placeholder="Marks" formControlName="marks">
+
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" class="input" placeholder="Grade" formControlName="grade">
+            </div>
+            <div class="msg">
+                <div class="btn" (click)="submitForm()">Submit</div>
+            </div>
+        </div>
+    </div>
+</form> -->

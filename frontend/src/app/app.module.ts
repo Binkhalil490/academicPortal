@@ -89,6 +89,10 @@ import { AssignSubFormComponent } from './components/config/assignment_submissio
 import { AssignSubListComponent } from './components/config/assignment_submission/assign-sub-list/assign-sub-list.component';
 import { CourseEnrollmentComponent } from './components/config/course/course-enrollment/course-enrollment.component';
 import { LoginComponent } from './components/login-page/login/login.component';
+import { ExamScheduleFormComponent } from './components/config/Exam/exam-schedule-form/exam-schedule-form.component';
+import { ExamScheduleListComponent } from './components/config/Exam/exam-schedule-list/exam-schedule-list.component';
+// import { ExamResultFormComponent } from './components/config/Exam/exam-result-form/exam-result-form.component';
+import { ExamResultListComponent } from './components/config/Exam/exam-result-list/exam-result-list.component';
 
 
 @NgModule({
@@ -156,7 +160,11 @@ import { LoginComponent } from './components/login-page/login/login.component';
     AssignSubListComponent,
     CourseEnrollmentComponent,
     LoginComponent,
-    RoleListComponent
+    RoleListComponent,
+    ExamScheduleFormComponent,
+    ExamScheduleListComponent,
+    // ExamResultFormComponent,
+    // ExamResultListComponent
    
   
 
